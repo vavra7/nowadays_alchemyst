@@ -1,7 +1,7 @@
 const mix = require('laravel-mix');
 
-mix.sass('src/sass/app.scss', 'public/css');
-mix.js('src/scripts/app.js', 'public/js/');
+mix.sass('src/sass/style.scss', 'public/css');
+mix.js('src/scripts/script.js', 'public/js/');
 
 mix.browserSync({
 	proxy: 'http://localhost:8000/',

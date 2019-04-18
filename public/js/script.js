@@ -86,10 +86,10 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/sass/app.scss":
-/*!***************************!*\
-  !*** ./src/sass/app.scss ***!
-  \***************************/
+/***/ "./src/sass/style.scss":
+/*!*****************************!*\
+  !*** ./src/sass/style.scss ***!
+  \*****************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -97,26 +97,26 @@
 
 /***/ }),
 
-/***/ "./src/scripts/app.js":
-/*!****************************!*\
-  !*** ./src/scripts/app.js ***!
-  \****************************/
+/***/ "./src/scripts/script.js":
+/*!*******************************!*\
+  !*** ./src/scripts/script.js ***!
+  \*******************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-alert('test');
+
 
 /***/ }),
 
 /***/ 0:
-/*!******************************************************!*\
-  !*** multi ./src/scripts/app.js ./src/sass/app.scss ***!
-  \******************************************************/
+/*!***********************************************************!*\
+  !*** multi ./src/scripts/script.js ./src/sass/style.scss ***!
+  \***********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/vavra/Projects/dev1/wp-content/themes/nowadays_alchemyst/src/scripts/app.js */"./src/scripts/app.js");
-module.exports = __webpack_require__(/*! /home/vavra/Projects/dev1/wp-content/themes/nowadays_alchemyst/src/sass/app.scss */"./src/sass/app.scss");
+__webpack_require__(/*! /home/vavra/Projects/dev1/wp-content/themes/nowadays_alchemyst/src/scripts/script.js */"./src/scripts/script.js");
+module.exports = __webpack_require__(/*! /home/vavra/Projects/dev1/wp-content/themes/nowadays_alchemyst/src/sass/style.scss */"./src/sass/style.scss");
 
 
 /***/ })
