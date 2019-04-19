@@ -45,7 +45,6 @@ $grid-columns: 12;
 
 .container,
 .container-fluid {
-	display: flex;
 	box-sizing: border-box;
 	width: 100%;
 	padding-right: ($grid-gutter / 2);

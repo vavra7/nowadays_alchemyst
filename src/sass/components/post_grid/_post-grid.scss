@@ -1,0 +1,20 @@
+#post-grid.grid {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+
+	@media (max-width: $md) {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+/**
+ *	tile
+ */
+.grid-tile {
+	background: grey;
+
+	&:nth-child(odd) {
+		background: rgb(173, 173, 173);
+	}
+}

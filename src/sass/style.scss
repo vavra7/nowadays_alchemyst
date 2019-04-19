@@ -1,4 +1,7 @@
 @import 'base/grid-system';
+@import 'base/aspect-ratio';
+@import 'components/components';
+
 
 body {
 	padding: 0;
@@ -6,5 +9,5 @@ body {
 }
 
 .container {
-	background: blue;
+	background: rgb(224, 224, 224);
 }

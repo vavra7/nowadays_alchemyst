@@ -1,0 +1,25 @@
+[class^='ar-'],
+[class*=' ar-'] {
+	position: relative;
+	width: 100%;
+	display: flex;
+
+	&.ar-1-1 {
+		padding-bottom: 100%;
+	}
+
+	&.ar-16-9 {
+		padding-bottom: 56.25%;
+	}
+
+	& > *,
+	& > a > * {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+	}
+
+	img {
+		object-fit: cover;
+	}
+}

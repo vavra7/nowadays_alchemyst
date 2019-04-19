@@ -1,13 +1,13 @@
 <?php
-namespace Inc;
+namespace inc;
 
 
-final class Init
+final class init
 {
 	public static function get_services()
 	{
 		return [
-			Setup\Enqueue::class
+			setup\enqueue::class
 		];
 	}
 

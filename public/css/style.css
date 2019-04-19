@@ -8,7 +8,6 @@
 
 .container,
 .container-fluid {
-  display: flex;
   box-sizing: border-box;
   width: 100%;
   padding-right: 15px;
@@ -605,12 +604,68 @@
   display: none;
 }
 
+[class^=ar-],
+[class*=" ar-"] {
+  position: relative;
+  width: 100%;
+  display: flex;
+}
+
+[class^=ar-].ar-1-1,
+[class*=" ar-"].ar-1-1 {
+  padding-bottom: 100%;
+}
+
+[class^=ar-].ar-16-9,
+[class*=" ar-"].ar-16-9 {
+  padding-bottom: 56.25%;
+}
+
+[class^=ar-] > *,
+[class^=ar-] > a > *,
+[class*=" ar-"] > *,
+[class*=" ar-"] > a > * {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+[class^=ar-] img,
+[class*=" ar-"] img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#post-grid.grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media (max-width: 768px) {
+  #post-grid.grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/**
+ *	tile
+ */
+
+.grid-tile {
+  background: grey;
+}
+
+.grid-tile:nth-child(odd) {
+  background: #adadad;
+}
+
 body {
   padding: 0;
   margin: 0;
 }
 
 .container {
-  background: blue;
+  background: #e0e0e0;
 }
 
