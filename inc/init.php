@@ -7,6 +7,7 @@ final class init
 	public static function get_services()
 	{
 		return [
+			setup\theme::class,
 			setup\enqueue::class
 		];
 	}
