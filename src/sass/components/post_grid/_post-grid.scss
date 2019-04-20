@@ -1,14 +1,15 @@
 #post-grid.grid {
 	width: 100%;
 	display: grid;
+	grid-gap: 0.5rem;
 	grid-template-columns: 1fr 1fr 1fr;
 
-	@media (max-width: $md) {
+	@media (max-width: $md - 1) {
 		grid-template-columns: 1fr 1fr;
 	}
 
-	@media (max-width: $sm) {
-		grid-template-columns: 1fr; 
+	@media (max-width: $sm - 1) {
+		grid-template-columns: 1fr;
 	}
 }
 
@@ -20,5 +21,21 @@
 
 	&:nth-child(odd) {
 		background: rgb(173, 173, 173);
+	}
+}
+
+/**
+ *	become lachemyst
+ */
+
+.become-alchemyst {
+	@media (min-width: $sm) and (max-width: $md - 1) {
+		grid-column: 1/3;
+		padding-bottom: (100% / 2) !important;
+	}
+
+	@media (min-width: $md) {
+		grid-column: 1/4;
+		padding-bottom: (100% / 3) !important;
 	}
 }

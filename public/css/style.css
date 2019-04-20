@@ -639,16 +639,17 @@
 #post-grid.grid {
   width: 100%;
   display: grid;
+  grid-gap: 0.5rem;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   #post-grid.grid {
     grid-template-columns: 1fr 1fr;
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 575px) {
   #post-grid.grid {
     grid-template-columns: 1fr;
   }
@@ -664,6 +665,24 @@
 
 .grid-tile:nth-child(odd) {
   background: #adadad;
+}
+
+/**
+ *	become lachemyst
+ */
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .become-alchemyst {
+    grid-column: 1/3;
+    padding-bottom: 50% !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .become-alchemyst {
+    grid-column: 1/4;
+    padding-bottom: 33.3333333333% !important;
+  }
 }
 
 body {

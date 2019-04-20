@@ -1,13 +1,14 @@
 const mix = require('laravel-mix');
 
-mix.sass('src/sass/style.scss', 'public/css');
 mix.js('src/scripts/script.js', 'public/js/');
+mix.sass('src/sass/style.scss', 'public/css');
 
 mix.browserSync({
-	proxy: 'http://localhost:8000/',
+	proxy: 'http://localhost:81/',
+	port: '80',
 	files: [
-		'src/sass/**/*.scss',
 		'src/scripts/**/*.js',
+		'src/sass/**/*.scss',
 		'**/*.php'
 	],
 	injectChanges: true,
