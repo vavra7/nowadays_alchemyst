@@ -2,7 +2,7 @@
  *	Text align center
  */
  
-@each $breakpoint, $width in $breakpoints-min {
+@each $breakpoint, $width in $breakpoints_min {
 	@media (min-width: $width) {
 		.text-#{$breakpoint}-center {
 			text-align: center;

@@ -18,7 +18,8 @@
 		}
 		?>
 	</div>
-	<div class="load-more-container text-xs-center">
+
+	<div class="load-more-container text-xs-center my-2">
 		<?php
 		inc\template_support\general::get_component('/components/partials/buttons/load-more.php');
 		?>

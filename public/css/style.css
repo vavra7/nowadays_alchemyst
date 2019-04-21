@@ -1,4 +1,12 @@
 /**
+ * Grid system
+ */
+
+/**
+ * Spacing
+ */
+
+/**
  *  Containers
  */
 
@@ -6,8 +14,8 @@
 .container-fluid {
   box-sizing: border-box;
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 16px;
+  padding-left: 16px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -44,8 +52,8 @@
   display: flex;
   flex-direction: row;
   box-sizing: border-box;
-  margin-right: -15px;
-  margin-left: -15px;
+  margin-right: -16px;
+  margin-left: -16px;
   flex: 0 1 auto;
   flex-wrap: wrap;
 }
@@ -60,8 +68,8 @@
   flex: 0 0 auto;
   position: relative;
   box-sizing: border-box;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 16px;
+  padding-left: 16px;
 }
 
 @media (min-width: 0) {
@@ -601,6 +609,59 @@
 }
 
 /**
+ *	Margin all
+ */
+
+.ma-0 {
+  margin: 0rem;
+}
+
+.ma-1 {
+  margin: 0.5rem;
+}
+
+.ma-2 {
+  margin: 1rem;
+}
+
+.ma-3 {
+  margin: 1.5rem;
+}
+
+.ma-4 {
+  margin: 2rem;
+}
+
+/**
+ *	Margin axis-y
+ */
+
+.my-0 {
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+}
+
+.my-1 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.my-2 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.my-3 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.my-4 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/**
  *	Text align center
  */
 
@@ -683,8 +744,8 @@ main {
 .container-fluid {
   box-sizing: border-box;
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 16px;
+  padding-left: 16px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -721,8 +782,8 @@ main {
   display: flex;
   flex-direction: row;
   box-sizing: border-box;
-  margin-right: -15px;
-  margin-left: -15px;
+  margin-right: -16px;
+  margin-left: -16px;
   flex: 0 1 auto;
   flex-wrap: wrap;
 }
@@ -737,8 +798,8 @@ main {
   flex: 0 0 auto;
   position: relative;
   box-sizing: border-box;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 16px;
+  padding-left: 16px;
 }
 
 @media (min-width: 0) {

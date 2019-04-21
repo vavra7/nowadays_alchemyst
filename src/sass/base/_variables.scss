@@ -1,10 +1,14 @@
+/**
+ * Grid system
+ */
+
 $xs: 0;
 $sm: 576px;
 $md: 768px;
 $lg: 992px;
 $xl: 1200px;
 
-$breakpoints-min: (
+$breakpoints_min: (
 	'xs': $xs,
 	'sm': $sm,
 	'md': $md,
@@ -12,7 +16,7 @@ $breakpoints-min: (
 	'xl': $xl
 );
 
-$breakpoints-max: (
+$breakpoints_max: (
 	'xs': $sm - 1,
 	'sm': $md - 1,
 	'md': $lg - 1,
@@ -20,17 +24,30 @@ $breakpoints-max: (
 	'xl': 9999px
 );
 
-$sm-max-container-width: 540px;
-$md-max-container-width: 720px;
-$lg-max-container-width: 960px;
-$xl-max-container-width: 1140px;
+$sm_max_container_width: 540px;
+$md_max_container_width: 720px;
+$lg_max_container_width: 960px;
+$xl_max_container_width: 1140px;
 
-$container-max-widths: (
-	$sm: $sm-max-container-width,
-	$md: $md-max-container-width,
-	$lg: $lg-max-container-width,
-	$xl: $xl-max-container-width
+$container_max_widths: (
+	$sm: $sm_max_container_width,
+	$md: $md_max_container_width,
+	$lg: $lg_max_container_width,
+	$xl: $xl_max_container_width
 );
 
-$grid-gutter: 30px;
-$grid-columns: 12;
+$grid_gutter: 32px;
+$grid_columns: 12;
+
+/**
+ * Spacing
+ */
+
+$spacing: (
+	'0': 0rem,
+	'1': 0.5rem,
+	'2': 1rem,
+	'3': 1.5rem,
+	'4': 2rem
+)
+

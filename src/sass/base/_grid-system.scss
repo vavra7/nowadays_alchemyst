@@ -6,16 +6,16 @@
 .container-fluid {
 	box-sizing: border-box;
 	width: 100%;
-	padding-right: ($grid-gutter / 2);
-	padding-left: ($grid-gutter / 2);
+	padding-right: ($grid_gutter / 2);
+	padding-left: ($grid_gutter / 2);
 	margin-right: auto;
 	margin-left: auto;
 }
 
 .container {
-	@each $breakpoint, $max-width in $container-max-widths {
+	@each $breakpoint, $max_width in $container_max_widths {
 		@media (min-width: #{$breakpoint}) {
-			max-width: #{$max-width};
+			max-width: #{$max_width};
 		}
 	}
 }
@@ -28,8 +28,8 @@
 	display: flex;
 	flex-direction: row;
 	box-sizing: border-box;
-	margin-right: -$grid-gutter / 2;
-	margin-left: -$grid-gutter / 2;
+	margin-right: -$grid_gutter / 2;
+	margin-left: -$grid_gutter / 2;
 	flex: 0 1 auto;
 	flex-wrap: wrap;
 }
@@ -44,15 +44,15 @@
 	flex: 0 0 auto;
 	position: relative;
 	box-sizing: border-box;
-	padding-right: $grid-gutter / 2;
-	padding-left: $grid-gutter / 2;
+	padding-right: $grid_gutter / 2;
+	padding-left: $grid_gutter / 2;
 }
 
-@each $breakpoint, $width in $breakpoints-min {
+@each $breakpoint, $width in $breakpoints_min {
 	@media (min-width: $width) {
-		@for $i from 1 through $grid-columns {
+		@for $i from 1 through $grid_columns {
 			.col-#{$breakpoint}-#{$i} {
-				width: percentage($i / $grid-columns);
+				width: percentage($i / $grid_columns);
 			}
 		}
 	}
@@ -62,11 +62,11 @@
 	* Offsets
 	*/
 
-@each $breakpoint, $width in $breakpoints-min {
+@each $breakpoint, $width in $breakpoints_min {
 	@media (min-width: $width) {
-		@for $i from 1 through $grid-columns {
+		@for $i from 1 through $grid_columns {
 			.col-#{$breakpoint}-offset-#{$i} {
-				margin-left: percentage($i / $grid-columns);
+				margin-left: percentage($i / $grid_columns);
 			}
 		}
 	}
@@ -76,10 +76,10 @@
 	* Hide
 	*/
 
-@for $i from 1 through length($breakpoints-max) {
-	@if ($i < length($breakpoints-max)) {
-		@media (max-width: nth( map-values($breakpoints-max), $i )) {
-			.hide-#{nth( map-keys($breakpoints-max), $i )} {
+@for $i from 1 through length($breakpoints_max) {
+	@if ($i < length($breakpoints_max)) {
+		@media (max-width: nth( map-values($breakpoints_max), $i )) {
+			.hide-#{nth( map-keys($breakpoints_max), $i )} {
 				display: none;
 			}
 		}
