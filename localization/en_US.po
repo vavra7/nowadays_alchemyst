@@ -24,6 +24,3 @@ msgstr ""
 #: components/partials/buttons/load-more.php:3
 msgid "load_more"
 msgstr "Load More"
-
-#~ msgid "test"
-#~ msgstr "EN"

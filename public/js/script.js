@@ -101,10 +101,78 @@
 /*!*******************************!*\
   !*** ./src/scripts/script.js ***!
   \*******************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _templateSupport_frontPage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./templateSupport/frontPage */ "./src/scripts/templateSupport/frontPage.js");
+/* harmony import */ var _templateSupport_frontPage__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_templateSupport_frontPage__WEBPACK_IMPORTED_MODULE_0__);
+
+
+/***/ }),
+
+/***/ "./src/scripts/templateSupport/frontPage.js":
+/*!**************************************************!*\
+  !*** ./src/scripts/templateSupport/frontPage.js ***!
+  \**************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+if (document.querySelector('.home.blog')) {
+  document.addEventListener('DOMContentLoaded', function () {
+    loadMore();
+  });
+}
 
+function loadMore() {
+  var LOAD_MORE_BTN = document.querySelector('.load-more.button');
+  var POST_CONTAINER = document.querySelector('.post-container');
+  var NONCE = document.getElementById('__load_more_posts_nonce').getAttribute('value');
+  var isLoading = false;
+  var requestedPage = 3;
+  LOAD_MORE_BTN.addEventListener('click', function () {
+    requestData();
+  });
+
+  function htmlToElements(html) {
+    var template = document.createElement('template');
+    template.innerHTML = html;
+    return template.content.childNodes;
+  }
+
+  function appendPosts(posts) {
+    posts.forEach(function (post) {
+      POST_CONTAINER.appendChild(post.cloneNode(true));
+    });
+    requestedPage++;
+    isLoading = false;
+  }
+
+  function requestData() {
+    if (!isLoading) {
+      isLoading = true;
+      var params = new URLSearchParams({
+        action: 'load_more_posts',
+        nonce: NONCE,
+        requested_page: requestedPage
+      });
+      fetch(enqueuedData.ajaxUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+        },
+        body: params.toString()
+      }).then(function (res) {
+        return res.text();
+      }).then(function (data) {
+        return appendPosts(htmlToElements(data));
+      })["catch"](function (err) {
+        return console.log(err);
+      });
+    }
+  }
+}
 
 /***/ }),
 

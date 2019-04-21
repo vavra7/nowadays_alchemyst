@@ -15,6 +15,6 @@
 	<?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php body_class(); ?>>
 	<div id="page">
 		<div id="site-content">
