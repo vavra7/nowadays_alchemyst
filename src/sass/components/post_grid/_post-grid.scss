@@ -1,15 +1,17 @@
 #post-grid.grid {
-	width: 100%;
-	display: grid;
-	grid-gap: 0.5rem;
-	grid-template-columns: 1fr 1fr 1fr;
+	.post-container {
+		width: 100%;
+		display: grid;
+		grid-gap: 0.5rem;
+		grid-template-columns: 1fr 1fr 1fr;
 
-	@media (max-width: $md - 1) {
-		grid-template-columns: 1fr 1fr;
-	}
+		@media (max-width: $md - 1) {
+			grid-template-columns: 1fr 1fr;
+		}
 
-	@media (max-width: $sm - 1) {
-		grid-template-columns: 1fr;
+		@media (max-width: $sm - 1) {
+			grid-template-columns: 1fr;
+		}
 	}
 }
 

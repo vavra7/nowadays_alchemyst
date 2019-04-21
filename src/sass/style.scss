@@ -1,8 +1,9 @@
+@import 'base/variables';
 @import 'base/grid-system';
+@import 'base/typography';
 @import 'base/aspect-ratio';
+@import 'base/general';
+@import 'base/grid-system';
 @import 'components/components';
 
-body {
-	padding: 0;
-	margin: 0;
-}
+

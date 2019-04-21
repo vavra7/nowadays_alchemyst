@@ -1,45 +1,4 @@
 /**
- *  Variables
- */
-
-$xs: 0;
-$sm: 576px;
-$md: 768px;
-$lg: 992px;
-$xl: 1200px;
-
-$breakpoints-min: (
-	'xs': $xs,
-	'sm': $sm,
-	'md': $md,
-	'lg': $lg,
-	'xl': $xl
-);
-
-$breakpoints-max: (
-	'xs': $sm - 1,
-	'sm': $md - 1,
-	'md': $lg - 1,
-	'lg': $xl - 1,
-	'xl': 9999px
-);
-
-$sm-max-container-width: 540px;
-$md-max-container-width: 720px;
-$lg-max-container-width: 960px;
-$xl-max-container-width: 1140px;
-
-$container-max-widths: (
-	$sm: $sm-max-container-width,
-	$md: $md-max-container-width,
-	$lg: $lg-max-container-width,
-	$xl: $xl-max-container-width
-);
-
-$grid-gutter: 30px;
-$grid-columns: 12;
-
-/**
  *  Containers
  */
 

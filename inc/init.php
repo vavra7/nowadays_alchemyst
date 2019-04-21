@@ -8,7 +8,8 @@ final class init
 	{
 		return [
 			setup\theme::class,
-			setup\enqueue::class
+			setup\enqueue::class,
+			template_support\front_page::class
 		];
 	}
 

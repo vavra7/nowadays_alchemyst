@@ -9,9 +9,11 @@
 
 	<div class="row">
 		<div class="col-xs-12">
-			<?php
-			inc\template_support\general::get_component('/components/post_grid/grid.php', true);
-			?>
+			<main id="main">
+				<?php
+				inc\template_support\general::get_component('/components/post_grid/grid.php', true);
+				?>
+			</main><!-- #main -->
 		</div>
 	</div>
 </div>
