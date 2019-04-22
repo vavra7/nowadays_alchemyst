@@ -24,7 +24,7 @@
 	$posts_num = $wp_query->found_posts;
 
 	if ($posts_num > 12) {
-		echo '<div class="load-more-container text-xs-center my-2">';
+		echo '<div class="load-more-container text-align-center my-2">';
 		inc\template_support\general::get_component('/components/partials/buttons/load-more.php');
 		wp_nonce_field('load_more_posts', '__load_more_posts_nonce', false, true);
 		echo '</div>';

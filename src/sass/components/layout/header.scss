@@ -1,0 +1,44 @@
+/**
+ * Logo container
+ */
+
+.logo-container {
+	width: 100%;
+
+	a {
+		img {
+			max-width: 50%;
+			min-width: 60px;
+			width: 10vw;
+		}
+	}
+}
+
+/**
+ *	Menu container
+ */
+
+.menu-container {
+	@media (max-width: $md - 1) {
+		position: absolute;
+	}
+
+	.switch-language {
+		font-size: 1.2rem;
+	}
+
+	.menu-button {
+		font-size: 1.5rem;
+		cursor: pointer;
+	}
+}
+
+/**
+ *	Menu container
+ */
+
+.description-container {
+	@media (max-width: $lg - 1) {
+		justify-content: center;
+	}
+}

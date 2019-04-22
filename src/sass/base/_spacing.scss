@@ -12,9 +12,19 @@
  *	Margin axis-y
  */
 
- @each $degree, $size in $spacing {
-	 .my-#{$degree} {
-		 margin-top: $size;
-		 margin-bottom: $size;
-	 }
- }
+@each $degree, $size in $spacing {
+	.my-#{$degree} {
+		margin-top: $size;
+		margin-bottom: $size;
+	}
+}
+
+/**
+ *	Margin top
+ */
+
+@each $degree, $size in $spacing {
+	.mt-#{$degree} {
+		margin-top: $size;
+	}
+}
