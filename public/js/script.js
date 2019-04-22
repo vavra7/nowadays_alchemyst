@@ -128,6 +128,7 @@ if (document.querySelector('.home.blog')) {
 function loadMore() {
   var LOAD_MORE_BTN = document.querySelector('.load-more.button');
   var POST_CONTAINER = document.querySelector('.post-container');
+  var PAGES_NUM = Math.ceil(enqueuedData.postsNum / 6);
   var NONCE = document.getElementById('__load_more_posts_nonce').getAttribute('value');
   var isLoading = false;
   var requestedPage = 3;
@@ -141,36 +142,46 @@ function loadMore() {
     return template.content.childNodes;
   }
 
+  function postOperations() {
+    requestedPage++;
+    isLoading = false;
+    LOAD_MORE_BTN.classList.remove('is-loading');
+
+    if (requestedPage > PAGES_NUM) {
+      LOAD_MORE_BTN.classList.add('hide');
+    }
+  }
+
   function appendPosts(posts) {
     posts.forEach(function (post) {
       POST_CONTAINER.appendChild(post.cloneNode(true));
     });
-    requestedPage++;
-    isLoading = false;
+    postOperations();
   }
 
   function requestData() {
-    if (!isLoading) {
-      isLoading = true;
-      var params = new URLSearchParams({
-        action: 'load_more_posts',
-        nonce: NONCE,
-        requested_page: requestedPage
-      });
-      fetch(enqueuedData.ajaxUrl, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
-        },
-        body: params.toString()
-      }).then(function (res) {
-        return res.text();
-      }).then(function (data) {
-        return appendPosts(htmlToElements(data));
-      })["catch"](function (err) {
-        return console.log(err);
-      });
-    }
+    if (isLoading) return;
+    if (requestedPage > PAGES_NUM) return;
+    isLoading = true;
+    LOAD_MORE_BTN.classList.add('is-loading');
+    var params = new URLSearchParams({
+      action: 'load_more_posts',
+      nonce: NONCE,
+      requested_page: requestedPage
+    });
+    fetch(enqueuedData.ajaxUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+      },
+      body: params.toString()
+    }).then(function (res) {
+      return res.text();
+    }).then(function (data) {
+      return appendPosts(htmlToElements(data));
+    })["catch"](function (err) {
+      return console.log(err);
+    });
   }
 }
 

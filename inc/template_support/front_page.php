@@ -32,7 +32,9 @@ class Front_page
 		];
 		$query = new \WP_Query($args);
 
+
 		if ($query->have_posts()) {
+			get_template_part('components/post_grid/become-alchemyst');
 			while ($query->have_posts()) {
 				$query->the_post();
 				get_template_part('components/post_grid/grid-tile');
