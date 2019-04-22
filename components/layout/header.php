@@ -22,7 +22,7 @@
 			</div>
 
 			<div class="col-xs-12 col-md-3 col-lg-4 justify-content-flex-end">
-				<div class="menu-container display-flex flex-direction-column justify-content-space-between align-items-flex-end">
+				<div class="header-menu-container display-flex flex-direction-column justify-content-space-between align-items-flex-end">
 					<div class="switch-language-container">
 						<?php
 						inc\template_support\general::get_component('/components/partials/buttons/switch-language.php');

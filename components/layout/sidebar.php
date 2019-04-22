@@ -7,6 +7,14 @@
 	</div>
 
 	<div class="main-area px-2">
-		Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque nostrum, labore atque commodi aperiam velit ipsam blanditiis non nobis corporis, ipsum fuga magnam eum aliquam vel. Dolore minima quas laborum vero laboriosam rerum est, at ipsam cum maxime dignissimos, aut accusantium veritatis. Aperiam non iure debitis itaque sapiente, nesciunt blanditiis sunt laboriosam rerum adipisci. Debitis, expedita quasi harum neque alias nesciunt laudantium ipsum nihil fugit sit qui dolore quos! Fugiat illum similique consequatur, non quo ipsa, sint exercitationem quam aut at eos tenetur qui! Laudantium necessitatibus doloribus, rerum ad nam error deleniti dolorum animi consectetur dolore maxime voluptatem? Quo nulla reprehenderit corrupti dolores excepturi odit tempore, architecto, accusantium perferendis voluptatem pariatur dolorem repellat! Itaque earum amet, incidunt modi voluptatem quibusdam repellat assumenda et autem ut minus, dolorum dignissimos harum consectetur sint fugiat sunt facere. Architecto optio inventore aspernatur facere, aliquam corrupti iste nobis labore natus porro officia sequi accusamus eaque molestias veritatis fugit illo temporibus? Ad architecto ex eum rem dolorem fugit sunt laborum corrupti, dicta consequatur nemo numquam! Doloribus, nobis? Voluptates quasi architecto voluptatibus. Placeat animi ut cum eum ipsum ex quasi eveniet dolorum pariatur soluta explicabo porro dolorem, eos rem dolores expedita ipsam neque, necessitatibus nam nulla id? Odio, dolorum ipsa. Eos consectetur autem voluptate? Consequatur, voluptas quam in non ipsam maxime eos repellendus quidem quod illo labore atque earum animi recusandae voluptate officiis possimus fugiat, quae sapiente neque quis rerum provident aut. Totam at eveniet ut possimus quae debitis laborum fugit quis accusantium assumenda facilis voluptate, cumque rem odit numquam alias cum perspiciatis quasi consequuntur nostrum, laudantium illum nihil? Est hic deleniti doloribus ipsa voluptate nostrum inventore accusantium, eligendi, iste sunt quo odit natus, voluptatum culpa adipisci perferendis provident? Animi id incidunt quibusdam. Facere dolores cumque impedit, modi autem sapiente nisi nesciunt quaerat, et excepturi architecto facilis?
+		<div class="menu-container">
+			<?php
+			inc\template_support\general::get_component('/components/layout/main-menu.php');
+			?>
+		</div>
+
+		<div class="widget-area-container mt-2">
+			Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit obcaecati culpa nulla in voluptatum suscipit, ipsum sunt earum quae adipisci consectetur illum cumque libero maxime molestias tenetur eaque porro saepe veniam aspernatur reprehenderit? Accusamus voluptate nihil facere quis voluptates! Aliquam magnam saepe quod? Molestiae corrupti delectus doloribus consequuntur ullam nostrum!
+		</div>
 	</div>
 </aside>

@@ -1,0 +1,19 @@
+nav#main-nav {
+	ul {
+		margin: 0;
+		list-style: none;
+		padding: 0;
+
+		li {
+			line-height: 2rem;
+
+			a {
+				display: block;
+
+				&:hover {
+					background: rgb(238, 238, 238);
+				}
+			}
+		}
+	}
+}

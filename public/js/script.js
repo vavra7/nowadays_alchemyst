@@ -133,6 +133,7 @@ document.addEventListener('DOMContentLoaded', function () {
 if (document.querySelector('.home.blog')) {
   document.addEventListener('DOMContentLoaded', function () {
     loadMore();
+    modalWindows();
   });
 }
 
@@ -158,6 +159,7 @@ function loadMore() {
     requestedPage++;
     isLoading = false;
     LOAD_MORE_BTN.classList.remove('is-loading');
+    modalWindows();
 
     if (requestedPage > PAGES_NUM) {
       LOAD_MORE_BTN.classList.add('hide');
@@ -197,6 +199,19 @@ function loadMore() {
       return console.log(err);
     });
   }
+}
+
+function modalWindows() {
+  var articleTiles = document.querySelectorAll('.grid-tile > article:not(.click-listener)');
+
+  var openModalWindow = function openModalWindow(e) {
+    return console.log(e);
+  };
+
+  articleTiles.forEach(function (article) {
+    article.addEventListener('click', openModalWindow);
+    article.classList.add('click-listener');
+  });
 }
 
 /***/ }),

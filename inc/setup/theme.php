@@ -7,6 +7,7 @@ class Theme
 	{
 		add_action('after_setup_theme', [$this, 'theme_support']);
 		add_action('after_setup_theme', [$this, 'theme_localization']);
+		add_action('after_setup_theme', [$this, 'register_menus']);
 	}
 
 
@@ -19,5 +20,13 @@ class Theme
 	public function theme_localization()
 	{
 		load_theme_textdomain('nowadays_alchemyst', get_template_directory() . '/localization');
+	}
+
+
+	public function register_menus()
+	{
+		register_nav_menus([
+			'main_menu' => __('sidebar_main_menu', 'nowadays_alchemyst')
+		]);
 	}
 }

@@ -26,13 +26,15 @@
 	-o-transform: $translate;
 	transform: $translate;
 
-	$transition: 320ms ease;
+	$transition: 350ms ease;
 
 	-webkit-transition: $transition;
 	-moz-transition: $transition;
 	-ms-transition: $transition;
 	-o-transition: $transition;
 	transition: $transition;
+
+	opacity: 0;
 
 	&.active {
 		$translate: translate(0);
@@ -42,6 +44,8 @@
 		-ms-transform: $translate;
 		-o-transform: $translate;
 		transform: $translate;
+
+		opacity: 1;
 	}
 
 	.top-bar {

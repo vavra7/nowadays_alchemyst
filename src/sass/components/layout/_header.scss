@@ -15,10 +15,9 @@
 }
 
 /**
- *	Menu container
+ *	Header menu container
  */
-
-.menu-container {
+.header-menu-container {
 	@media (max-width: $md - 1) {
 		position: absolute;
 	}
@@ -30,7 +29,7 @@
 }
 
 /**
- *	Menu container
+ *	Description container
  */
 
 .description-container {

@@ -1,6 +1,7 @@
 if (document.querySelector('.home.blog')) {
 	document.addEventListener('DOMContentLoaded', () => {
 		loadMore();
+		modalWindows();
 	});
 }
 
@@ -31,6 +32,7 @@ function loadMore() {
 		requestedPage++;
 		isLoading = false;
 		LOAD_MORE_BTN.classList.remove('is-loading');
+		modalWindows();
 
 		if (requestedPage > PAGES_NUM) {
 			LOAD_MORE_BTN.classList.add('hide');
@@ -71,4 +73,15 @@ function loadMore() {
 			.then(data => appendPosts(htmlToElements(data)))
 			.catch(err => console.log(err));
 	}
+}
+
+function modalWindows() {
+	let articleTiles = document.querySelectorAll('.grid-tile > article:not(.click-listener)');
+	
+	const openModalWindow = e => console.log(e);
+	
+	articleTiles.forEach(article => {
+		article.addEventListener('click', openModalWindow);
+		article.classList.add('click-listener')
+	});
 }
