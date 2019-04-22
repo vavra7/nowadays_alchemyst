@@ -153,10 +153,12 @@ function loadMore() {
   }
 
   function appendPosts(posts) {
-    posts.forEach(function (post) {
-      POST_CONTAINER.appendChild(post.cloneNode(true));
-    });
-    postOperations();
+    setTimeout(function () {
+      posts.forEach(function (post) {
+        POST_CONTAINER.appendChild(post.cloneNode(true));
+      });
+      postOperations();
+    }, 1500);
   }
 
   function requestData() {

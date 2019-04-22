@@ -37,11 +37,13 @@ function loadMore() {
 	}
 
 	function appendPosts(posts) {
-		posts.forEach(post => {
-			POST_CONTAINER.appendChild(post.cloneNode(true));
-		});
+		setTimeout(() => {
+			posts.forEach(post => {
+				POST_CONTAINER.appendChild(post.cloneNode(true));
+			});
 
-		postOperations();
+			postOperations();
+		}, 1500);
 	}
 
 	function requestData() {

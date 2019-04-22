@@ -1387,3 +1387,46 @@ main {
   }
 }
 
+/**
+ *	Load more
+ */
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.button.load-more i {
+  display: inline-block;
+}
+
+.button.load-more.is-loading i {
+  -webkit-animation-name: spin;
+          animation-name: spin;
+  -webkit-animation-duration: 1300ms;
+          animation-duration: 1300ms;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
