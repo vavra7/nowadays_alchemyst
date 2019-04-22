@@ -28,3 +28,35 @@
 		margin-top: $size;
 	}
 }
+
+/**
+ *	Padding all
+ */
+
+ @each $degree, $size in $spacing {
+	.pa-#{$degree} {
+		padding: $size;
+	}
+}
+
+/**
+ *	Padding axis-x
+ */
+
+ @each $degree, $size in $spacing {
+	.px-#{$degree} {
+		padding-right: $size;
+		padding-left: $size;
+	}
+}
+
+/**
+ *	Padding axis-y
+ */
+
+ @each $degree, $size in $spacing {
+	.py-#{$degree} {
+		padding-top: $size;
+		padding-bottom: $size;
+	}
+}

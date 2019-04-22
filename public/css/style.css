@@ -676,6 +676,10 @@
   position: relative;
 }
 
+.position-fixed {
+  position: fixed;
+}
+
 /**
  *	Margin all
  */
@@ -751,6 +755,88 @@
 
 .mt-4 {
   margin-top: 2rem;
+}
+
+/**
+ *	Padding all
+ */
+
+.pa-0 {
+  padding: 0rem;
+}
+
+.pa-1 {
+  padding: 0.5rem;
+}
+
+.pa-2 {
+  padding: 1rem;
+}
+
+.pa-3 {
+  padding: 1.5rem;
+}
+
+.pa-4 {
+  padding: 2rem;
+}
+
+/**
+ *	Padding axis-x
+ */
+
+.px-0 {
+  padding-right: 0rem;
+  padding-left: 0rem;
+}
+
+.px-1 {
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.px-2 {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.px-3 {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.px-4 {
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+/**
+ *	Padding axis-y
+ */
+
+.py-0 {
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+}
+
+.py-1 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.py-2 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.py-3 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.py-4 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 /**
@@ -1480,6 +1566,10 @@ main {
   position: relative;
 }
 
+.position-fixed {
+  position: fixed;
+}
+
 /**
  * Logo container
  */
@@ -1504,10 +1594,6 @@ main {
   }
 }
 
-.menu-container .switch-language {
-  font-size: 1.2rem;
-}
-
 .menu-container .menu-button {
   font-size: 1.5rem;
   cursor: pointer;
@@ -1520,6 +1606,50 @@ main {
 @media (max-width: 991px) {
   .description-container {
     justify-content: center;
+  }
+}
+
+#main-sidebar.sidebar {
+  background: white;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 300px;
+  max-width: 75%;
+  z-index: 9;
+  box-shadow: 5px 0px 10px 6px rgba(51, 51, 51, 0.75);
+  -webkit-transform: translate(calc(100% + 10px));
+  transform: translate(calc(100% + 10px));
+  transition: 320ms ease;
+}
+
+#main-sidebar.sidebar.active {
+  -webkit-transform: translate(0);
+  transform: translate(0);
+}
+
+#main-sidebar.sidebar .top-bar #menu-close-button {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+#main-sidebar.sidebar .main-area {
+  flex-grow: 1;
+  overflow-y: scroll;
+}
+
+@media (min-width: 576px) {
+  #main-sidebar.sidebar .main-area::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  #main-sidebar.sidebar .main-area::-webkit-scrollbar-thumb {
+    background: #dddddd;
+    border-radius: 20px;
+  }
+
+  #main-sidebar.sidebar .main-area::-webkit-scrollbar-thumb:hover {
+    background: #c5c5c5;
   }
 }
 
@@ -1613,5 +1743,9 @@ main {
           animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
+}
+
+.switch-language {
+  font-size: 1.35rem;
 }
 

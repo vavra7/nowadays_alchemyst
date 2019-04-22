@@ -15,7 +15,8 @@ function loadMore() {
 	let isLoading = false;
 	let requestedPage = 3;
 
-	LOAD_MORE_BTN.addEventListener('click', () => {
+	LOAD_MORE_BTN.addEventListener('click', e => {
+		e.preventDefault;
 		requestData();
 	});
 

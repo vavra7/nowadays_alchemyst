@@ -1,0 +1,73 @@
+#main-sidebar.sidebar {
+	background: rgb(255, 255, 255);
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 300px;
+	max-width: 75%;
+	z-index: 9;
+
+	$shadow-x-length: 5px;
+	$shadow-blur: 10px;
+	$shadow-radius: 6px;
+	$shadow-color: rgba(51, 51, 51, 0.75);
+
+	-webkit-box-shadow: $shadow-x-length 0px $shadow-blur $shadow-radius
+		$shadow-color;
+	-moz-box-shadow: $shadow-x-length 0px $shadow-blur $shadow-radius
+		$shadow-color;
+	box-shadow: $shadow-x-length 0px $shadow-blur $shadow-radius $shadow-color;
+
+	$translate: translate(calc(100% + 10px));
+
+	-webkit-transform: $translate;
+	-moz-transform: $translate;
+	-ms-transform: $translate;
+	-o-transform: $translate;
+	transform: $translate;
+
+	$transition: 320ms ease;
+
+	-webkit-transition: $transition;
+	-moz-transition: $transition;
+	-ms-transition: $transition;
+	-o-transition: $transition;
+	transition: $transition;
+
+	&.active {
+		$translate: translate(0);
+
+		-webkit-transform: $translate;
+		-moz-transform: $translate;
+		-ms-transform: $translate;
+		-o-transform: $translate;
+		transform: $translate;
+	}
+
+	.top-bar {
+		#menu-close-button {
+			font-size: 1.5rem;
+			cursor: pointer;
+		}
+	}
+
+	.main-area {
+		flex-grow: 1;
+		overflow-y: scroll;
+
+		@media (min-width: $sm) {
+			&::-webkit-scrollbar {
+				width: 7px;
+			}
+
+			&::-webkit-scrollbar-thumb {
+				background: rgb(221, 221, 221);
+				border-radius: 20px;
+			}
+
+			&::-webkit-scrollbar-thumb:hover {
+				background: rgb(197, 197, 197);
+			}
+		}
+	}
+}

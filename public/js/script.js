@@ -109,6 +109,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _templateSupport_frontPage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./templateSupport/frontPage */ "./src/scripts/templateSupport/frontPage.js");
 /* harmony import */ var _templateSupport_frontPage__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_templateSupport_frontPage__WEBPACK_IMPORTED_MODULE_0__);
 
+document.addEventListener('DOMContentLoaded', function () {
+  var MENU_TOGGLE_BUTTON = document.getElementById('menu-toggle-button');
+  var MENU_CLOSE_BUTTON = document.getElementById('menu-close-button');
+  var MAIN_SIDEBAR = document.getElementById('main-sidebar');
+  MENU_TOGGLE_BUTTON.addEventListener('click', function () {
+    return MAIN_SIDEBAR.classList.toggle('active');
+  });
+  MENU_CLOSE_BUTTON.addEventListener('click', function () {
+    return MAIN_SIDEBAR.classList.remove('active');
+  });
+});
 
 /***/ }),
 
@@ -132,7 +143,8 @@ function loadMore() {
   var NONCE = document.getElementById('__load_more_posts_nonce').getAttribute('value');
   var isLoading = false;
   var requestedPage = 3;
-  LOAD_MORE_BTN.addEventListener('click', function () {
+  LOAD_MORE_BTN.addEventListener('click', function (e) {
+    e.preventDefault;
     requestData();
   });
 

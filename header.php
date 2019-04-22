@@ -18,6 +18,7 @@
 <body <?php body_class(); ?>>
 	<div id="page">
 		<?php
+		inc\template_support\general::get_component('/components/layout/sidebar.php', true);
 		inc\template_support\general::get_component('/components/layout/header.php', true);
 		?>
 		<div id="site-content">
