@@ -1,4 +1,4 @@
-<aside id="main-sidebar" class="<?php echo basename(__FILE__, '.php'); ?> position-fixed display-flex flex-direction-column active">
+<aside id="main-sidebar" class="<?php echo basename(__FILE__, '.php'); ?> position-fixed display-flex flex-direction-column">
 	<div class="top-bar pa-2 display-flex justify-content-space-between">
 		<i id="menu-close-button" class="na-icon-close"></i>
 		<?php

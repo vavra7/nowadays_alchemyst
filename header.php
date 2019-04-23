@@ -17,6 +17,7 @@
 
 <body <?php body_class(); ?>>
 	<div id="page">
+		<div id="page-overlay" class="position-fixed"></div>
 		<?php
 		inc\template_support\general::get_component('/components/layout/sidebar.php', true);
 		inc\template_support\general::get_component('/components/layout/header.php', true);

@@ -1,9 +1,12 @@
 @import 'base/variables';
+@import 'base/mixins';
 @import 'base/grid-system';
 @import 'base/spacing';
 @import 'base/typography';
 @import 'base/aspect-ratio';
 @import 'base/general';
 @import 'base/grid-system';
+
+@import 'partials/page-overlay';
 
 @import 'components/components';

@@ -76,12 +76,38 @@ function loadMore() {
 }
 
 function modalWindows() {
-	let articleTiles = document.querySelectorAll('.grid-tile > article:not(.click-listener)');
-	
-	const openModalWindow = e => console.log(e);
-	
+	let openedModalId = '';
+	let overlayListener = false;
+	let articleTiles = document.querySelectorAll(
+		'.grid-tile > article:not(.click-listener)'
+	);
+
+	const PAGE_OVERLAY = document.getElementById('page-overlay');
+
+	const openModalWindow = (e, article) => {
+		if (article !== e.target) return;
+
+		let el = e.target.querySelector('div.modal-window');
+
+		PAGE_OVERLAY.classList.add('active');
+		el.classList.add('active');
+		openedModalId = el.id;
+	};
+
+	const closeModalWindow = () => {
+		document.getElementById(openedModalId).classList.remove('active');
+		PAGE_OVERLAY.classList.remove('active');
+	};
+
+	(function() {
+		if (overlayListener) return;
+
+		overlayListener = true;
+		PAGE_OVERLAY.addEventListener('click', closeModalWindow);
+	})();
+
 	articleTiles.forEach(article => {
-		article.addEventListener('click', openModalWindow);
-		article.classList.add('click-listener')
+		article.addEventListener('click', e => openModalWindow(e, article));
+		article.classList.add('click-listener');
 	});
 }

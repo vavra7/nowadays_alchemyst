@@ -5,46 +5,15 @@
 	bottom: 0;
 	width: 300px;
 	max-width: 75%;
-	z-index: 9;
+	z-index: 8;
 
-	$shadow-x-length: 5px;
-	$shadow-blur: 10px;
-	$shadow-radius: 6px;
-	$shadow-color: rgba(51, 51, 51, 0.75);
-
-	-webkit-box-shadow: $shadow-x-length 0px $shadow-blur $shadow-radius
-		$shadow-color;
-	-moz-box-shadow: $shadow-x-length 0px $shadow-blur $shadow-radius
-		$shadow-color;
-	box-shadow: $shadow-x-length 0px $shadow-blur $shadow-radius $shadow-color;
-
-	$translate: translate(calc(100% + 10px));
-
-	-webkit-transform: $translate;
-	-moz-transform: $translate;
-	-ms-transform: $translate;
-	-o-transform: $translate;
-	transform: $translate;
-
-	$transition: 350ms ease;
-
-	-webkit-transition: $transition;
-	-moz-transition: $transition;
-	-ms-transition: $transition;
-	-o-transition: $transition;
-	transition: $transition;
-
+	@include box-shadow(5px 0px 10px 6px rgba(51, 51, 51, 0.75));
+	@include transform(translate(calc(100% + 10px)));
+	@include transition(350ms ease);
 	opacity: 0;
 
 	&.active {
-		$translate: translate(0);
-
-		-webkit-transform: $translate;
-		-moz-transform: $translate;
-		-ms-transform: $translate;
-		-o-transform: $translate;
-		transform: $translate;
-
+		@include transform(translate(0));
 		opacity: 1;
 	}
 

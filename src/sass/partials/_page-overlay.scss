@@ -1,0 +1,18 @@
+#page-overlay {
+	background: rgba(0, 23, 70, 0.466);
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 400vw;
+	z-index: 9;
+
+	visibility: hidden;
+	opacity: 0;
+
+	@include transition(all 300ms ease);
+
+	&.active {
+		visibility: visible;
+		opacity: 1;
+	}
+}

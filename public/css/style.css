@@ -1574,6 +1574,27 @@ a {
   position: fixed;
 }
 
+#page-overlay {
+  background: rgba(0, 23, 70, 0.466);
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 400vw;
+  z-index: 9;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -webkit-transition: all 300ms ease;
+}
+
+#page-overlay.active {
+  visibility: visible;
+  opacity: 1;
+}
+
 /**
  * Logo container
  */
@@ -1620,17 +1641,31 @@ a {
   bottom: 0;
   width: 300px;
   max-width: 75%;
-  z-index: 9;
+  z-index: 8;
   box-shadow: 5px 0px 10px 6px rgba(51, 51, 51, 0.75);
-  -webkit-transform: translate(calc(100% + 10px));
+  -o-box-shadow: 5px 0px 10px 6px rgba(51, 51, 51, 0.75);
+  -ms-box-shadow: 5px 0px 10px 6px rgba(51, 51, 51, 0.75);
+  -moz-box-shadow: 5px 0px 10px 6px rgba(51, 51, 51, 0.75);
+  -webkit-box-shadow: 5px 0px 10px 6px rgba(51, 51, 51, 0.75);
   transform: translate(calc(100% + 10px));
+  -o-transform: translate(calc(100% + 10px));
+  -ms-transform: translate(calc(100% + 10px));
+  -moz-transform: translate(calc(100% + 10px));
+  -webkit-transform: translate(calc(100% + 10px));
   transition: 350ms ease;
+  -o-transition: 350ms ease;
+  -ms-transition: 350ms ease;
+  -moz-transition: 350ms ease;
+  -webkit-transition: 350ms ease;
   opacity: 0;
 }
 
 #main-sidebar.sidebar.active {
-  -webkit-transform: translate(0);
   transform: translate(0);
+  -o-transform: translate(0);
+  -ms-transform: translate(0);
+  -moz-transform: translate(0);
+  -webkit-transform: translate(0);
   opacity: 1;
 }
 
@@ -1697,7 +1732,7 @@ nav#main-nav ul li a:hover {
 }
 
 /**
- *	tile
+ *	Tile
  */
 
 .grid-tile {
@@ -1709,7 +1744,7 @@ nav#main-nav ul li a:hover {
 }
 
 /**
- *	become lachemyst
+ *	Become lachemyst
  */
 
 @media (min-width: 576px) and (max-width: 767px) {
@@ -1724,6 +1759,42 @@ nav#main-nav ul li a:hover {
     grid-column: 1/4;
     padding-bottom: 33.3333333333% !important;
   }
+}
+
+/**
+ *	Become lachemyst
+ */
+
+.modal-window {
+  background: white;
+  z-index: 10;
+  visibility: hidden;
+  opacity: 0;
+  box-shadow: 0px 0px 60px 30px rgba(51, 51, 51, 0.466);
+  -o-box-shadow: 0px 0px 60px 30px rgba(51, 51, 51, 0.466);
+  -ms-box-shadow: 0px 0px 60px 30px rgba(51, 51, 51, 0.466);
+  -moz-box-shadow: 0px 0px 60px 30px rgba(51, 51, 51, 0.466);
+  -webkit-box-shadow: 0px 0px 60px 30px rgba(51, 51, 51, 0.466);
+  transition: 350ms ease;
+  -o-transition: 350ms ease;
+  -ms-transition: 350ms ease;
+  -moz-transition: 350ms ease;
+  -webkit-transition: 350ms ease;
+  width: 80vw;
+  max-width: 1000px;
+  height: 80vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%) translate(0, -50%);
+  -o-transform: translate(-50%) translate(0, -50%);
+  -ms-transform: translate(-50%) translate(0, -50%);
+  -moz-transform: translate(-50%) translate(0, -50%);
+  -webkit-transform: translate(-50%) translate(0, -50%);
+}
+
+.modal-window.active {
+  visibility: visible;
+  opacity: 1;
 }
 
 /**
