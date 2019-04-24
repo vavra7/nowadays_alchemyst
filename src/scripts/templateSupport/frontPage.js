@@ -84,7 +84,7 @@ function modalWindows() {
 
 	const pageOverlay = document.getElementById('page-overlay');
 
-	const openModalWindow = (article) => {
+	const openModalWindow = article => {
 		let el = article.querySelector('div.modal-window');
 
 		pageOverlay.classList.add('active');
@@ -93,8 +93,18 @@ function modalWindows() {
 	};
 
 	window.closeModalWindow = () => {
-		document.getElementById(openedModalId).classList.remove('active');
+		let modalWindow = document.getElementById(openedModalId);
+		let youtube = modalWindow.querySelector('.youtube-container > iframe');
+
+		modalWindow.classList.remove('active');
 		pageOverlay.classList.remove('active');
+
+		if (youtube) {
+			youtube.contentWindow.postMessage(
+				'{"event":"command","func":"stopVideo","args":""}',
+				'*'
+			);
+		}
 	};
 
 	(function() {

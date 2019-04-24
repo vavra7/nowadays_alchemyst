@@ -7,6 +7,7 @@ final class init
 	public static function get_services()
 	{
 		return [
+			setup\core::class,
 			setup\theme::class,
 			setup\enqueue::class,
 			template_support\front_page::class

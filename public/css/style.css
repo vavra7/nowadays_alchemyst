@@ -1759,11 +1759,11 @@ nav#main-nav ul li a:hover {
   max-height: calc(100vh - 1.5rem);
   top: 50%;
   left: 50%;
-  transform: translate(-50%) translate(0, -30%) scale(0.7);
-  -o-transform: translate(-50%) translate(0, -30%) scale(0.7);
-  -ms-transform: translate(-50%) translate(0, -30%) scale(0.7);
-  -moz-transform: translate(-50%) translate(0, -30%) scale(0.7);
-  -webkit-transform: translate(-50%) translate(0, -30%) scale(0.7);
+  transform: translate(-50%) translate(0, -30%) scale(0.8);
+  -o-transform: translate(-50%) translate(0, -30%) scale(0.8);
+  -ms-transform: translate(-50%) translate(0, -30%) scale(0.8);
+  -moz-transform: translate(-50%) translate(0, -30%) scale(0.8);
+  -webkit-transform: translate(-50%) translate(0, -30%) scale(0.8);
 }
 
 @media (min-width: 576px) {

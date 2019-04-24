@@ -215,8 +215,14 @@ function modalWindows() {
   };
 
   window.closeModalWindow = function () {
-    document.getElementById(openedModalId).classList.remove('active');
+    var modalWindow = document.getElementById(openedModalId);
+    var youtube = modalWindow.querySelector('.youtube-container > iframe');
+    modalWindow.classList.remove('active');
     pageOverlay.classList.remove('active');
+
+    if (youtube) {
+      youtube.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
+    }
   };
 
   (function () {

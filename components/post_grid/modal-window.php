@@ -15,10 +15,10 @@
 		?>
 	</p>
 
-	<pre>
+	<div class="youtube-container">
 		<?php
-		// $blocks = parse_blocks($post->post_content);
-		print_r(inc\template_support\general::get_first_youtube_link(get_post()));
+		$youtube_url = inc\template_support\general::get_first_youtube_video(get_post());
+		echo wp_oembed_get($youtube_url)
 		?>
-	</pre>
+	</div>
 </div>
