@@ -76,7 +76,6 @@ function loadMore() {
 }
 
 function modalWindows() {
-	let openedModalId = '';
 	let overlayListener = false;
 	let articleTiles = document.querySelectorAll(
 		'.grid-tile > article:not(.click-listener)'
@@ -89,22 +88,24 @@ function modalWindows() {
 
 		pageOverlay.classList.add('active');
 		el.classList.add('active');
-		openedModalId = el.id;
 	};
 
 	window.closeModalWindow = () => {
-		let modalWindow = document.getElementById(openedModalId);
-		let youtube = modalWindow.querySelector('.youtube-container > iframe');
+		let modalWindows = document.querySelectorAll('.modal-window');
 
-		modalWindow.classList.remove('active');
+		modalWindows.forEach(modalWindow => {
+			let youtube = modalWindow.querySelector('.youtube-container > iframe');
+
+			modalWindow.classList.remove('active');
+			if (youtube) {
+				youtube.contentWindow.postMessage(
+					'{"event":"command","func":"stopVideo","args":""}',
+					'*'
+				);
+			}
+		});
+
 		pageOverlay.classList.remove('active');
-
-		if (youtube) {
-			youtube.contentWindow.postMessage(
-				'{"event":"command","func":"stopVideo","args":""}',
-				'*'
-			);
-		}
 	};
 
 	(function() {
