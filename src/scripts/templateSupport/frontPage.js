@@ -82,32 +82,30 @@ function modalWindows() {
 		'.grid-tile > article:not(.click-listener)'
 	);
 
-	const PAGE_OVERLAY = document.getElementById('page-overlay');
+	const pageOverlay = document.getElementById('page-overlay');
 
-	const openModalWindow = (e, article) => {
-		if (article !== e.target) return;
+	const openModalWindow = (article) => {
+		let el = article.querySelector('div.modal-window');
 
-		let el = e.target.querySelector('div.modal-window');
-
-		PAGE_OVERLAY.classList.add('active');
+		pageOverlay.classList.add('active');
 		el.classList.add('active');
 		openedModalId = el.id;
 	};
 
-	const closeModalWindow = () => {
+	window.closeModalWindow = () => {
 		document.getElementById(openedModalId).classList.remove('active');
-		PAGE_OVERLAY.classList.remove('active');
+		pageOverlay.classList.remove('active');
 	};
 
 	(function() {
 		if (overlayListener) return;
 
 		overlayListener = true;
-		PAGE_OVERLAY.addEventListener('click', closeModalWindow);
+		pageOverlay.addEventListener('click', closeModalWindow);
 	})();
 
 	articleTiles.forEach(article => {
-		article.addEventListener('click', e => openModalWindow(e, article));
+		article.addEventListener('click', () => openModalWindow(article), true);
 		article.classList.add('click-listener');
 	});
 }

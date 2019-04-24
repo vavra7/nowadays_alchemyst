@@ -640,46 +640,6 @@
   flex-direction: column-reverse;
 }
 
-.display-flex {
-  display: flex;
-}
-
-.flex-direction-column {
-  flex-direction: column;
-}
-
-.align-items-center {
-  align-items: center;
-}
-
-.align-items-flex-end {
-  align-items: flex-end;
-}
-
-.justify-content-flex-start {
-  justify-content: flex-start;
-}
-
-.justify-content-center {
-  justify-content: center;
-}
-
-.justify-content-flex-end {
-  justify-content: flex-end;
-}
-
-.justify-content-space-between {
-  justify-content: space-between;
-}
-
-.position-relative {
-  position: relative;
-}
-
-.position-fixed {
-  position: fixed;
-}
-
 /**
  *	Margin all
  */
@@ -1566,6 +1526,10 @@ a {
   justify-content: space-between;
 }
 
+/**
+ *	Position
+ */
+
 .position-relative {
   position: relative;
 }
@@ -1574,20 +1538,24 @@ a {
   position: fixed;
 }
 
+.position-absolute {
+  position: absolute;
+}
+
 #page-overlay {
   background: rgba(0, 23, 70, 0.466);
   top: 0;
   left: 0;
   height: 100vh;
-  width: 400vw;
+  width: 100vw;
   z-index: 9;
   visibility: hidden;
   opacity: 0;
-  transition: all 300ms ease;
-  -o-transition: all 300ms ease;
-  -ms-transition: all 300ms ease;
-  -moz-transition: all 300ms ease;
-  -webkit-transition: all 300ms ease;
+  transition: visibility 400ms linear, opacity 400ms linear;
+  -o-transition: visibility 400ms linear, opacity 400ms linear;
+  -ms-transition: visibility 400ms linear, opacity 400ms linear;
+  -moz-transition: visibility 400ms linear, opacity 400ms linear;
+  -webkit-transition: visibility 400ms linear, opacity 400ms linear;
 }
 
 #page-overlay.active {
@@ -1762,7 +1730,7 @@ nav#main-nav ul li a:hover {
 }
 
 /**
- *	Become lachemyst
+ *	Modal window
  */
 
 .modal-window {
@@ -1770,31 +1738,64 @@ nav#main-nav ul li a:hover {
   z-index: 10;
   visibility: hidden;
   opacity: 0;
+  padding: 1rem;
+  box-sizing: border-box;
+  overflow-y: auto;
   box-shadow: 0px 0px 60px 30px rgba(51, 51, 51, 0.466);
   -o-box-shadow: 0px 0px 60px 30px rgba(51, 51, 51, 0.466);
   -ms-box-shadow: 0px 0px 60px 30px rgba(51, 51, 51, 0.466);
   -moz-box-shadow: 0px 0px 60px 30px rgba(51, 51, 51, 0.466);
   -webkit-box-shadow: 0px 0px 60px 30px rgba(51, 51, 51, 0.466);
-  transition: 350ms ease;
-  -o-transition: 350ms ease;
-  -ms-transition: 350ms ease;
-  -moz-transition: 350ms ease;
-  -webkit-transition: 350ms ease;
-  width: 80vw;
-  max-width: 1000px;
-  height: 80vh;
+  transition: opacity 350ms ease-out, visibility 350ms ease-out, -webkit-transform 350ms ease-out;
+  transition: opacity 350ms ease-out, visibility 350ms ease-out, transform 350ms ease-out;
+  transition: opacity 350ms ease-out, visibility 350ms ease-out, transform 350ms ease-out, -webkit-transform 350ms ease-out;
+  -o-transition: opacity 350ms ease-out, visibility 350ms ease-out, transform 350ms ease-out;
+  -ms-transition: opacity 350ms ease-out, visibility 350ms ease-out, transform 350ms ease-out;
+  -moz-transition: opacity 350ms ease-out, visibility 350ms ease-out, transform 350ms ease-out;
+  -webkit-transition: opacity 350ms ease-out, visibility 350ms ease-out, transform 350ms ease-out;
+  width: calc(100vw - 1.5rem);
+  max-width: 700px;
+  height: auto;
+  max-height: calc(100vh - 1.5rem);
   top: 50%;
   left: 50%;
-  transform: translate(-50%) translate(0, -50%);
-  -o-transform: translate(-50%) translate(0, -50%);
-  -ms-transform: translate(-50%) translate(0, -50%);
-  -moz-transform: translate(-50%) translate(0, -50%);
-  -webkit-transform: translate(-50%) translate(0, -50%);
+  transform: translate(-50%) translate(0, -30%) scale(0.7);
+  -o-transform: translate(-50%) translate(0, -30%) scale(0.7);
+  -ms-transform: translate(-50%) translate(0, -30%) scale(0.7);
+  -moz-transform: translate(-50%) translate(0, -30%) scale(0.7);
+  -webkit-transform: translate(-50%) translate(0, -30%) scale(0.7);
+}
+
+@media (min-width: 576px) {
+  .modal-window::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  .modal-window::-webkit-scrollbar-thumb {
+    background: #dddddd;
+    border-radius: 20px;
+  }
+
+  .modal-window::-webkit-scrollbar-thumb:hover {
+    background: #c5c5c5;
+  }
 }
 
 .modal-window.active {
+  transform: translate(-50%) translate(0, -50%) scale(1);
+  -o-transform: translate(-50%) translate(0, -50%) scale(1);
+  -ms-transform: translate(-50%) translate(0, -50%) scale(1);
+  -moz-transform: translate(-50%) translate(0, -50%) scale(1);
+  -webkit-transform: translate(-50%) translate(0, -50%) scale(1);
   visibility: visible;
   opacity: 1;
+}
+
+.modal-window #close-modal-button {
+  font-size: 1.5rem;
+  right: 0.8rem;
+  top: 0.8rem;
+  cursor: pointer;
 }
 
 /**

@@ -3,6 +3,7 @@
 		<h1>
 			<?php the_title(); ?>
 		</h1>
+		
 		<?php
 		inc\template_support\general::get_component('/components/post_grid/modal-window.php');
 		?>

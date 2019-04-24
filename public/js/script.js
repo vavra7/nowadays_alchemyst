@@ -205,31 +205,30 @@ function modalWindows() {
   var openedModalId = '';
   var overlayListener = false;
   var articleTiles = document.querySelectorAll('.grid-tile > article:not(.click-listener)');
-  var PAGE_OVERLAY = document.getElementById('page-overlay');
+  var pageOverlay = document.getElementById('page-overlay');
 
-  var openModalWindow = function openModalWindow(e, article) {
-    if (article !== e.target) return;
-    var el = e.target.querySelector('div.modal-window');
-    PAGE_OVERLAY.classList.add('active');
+  var openModalWindow = function openModalWindow(article) {
+    var el = article.querySelector('div.modal-window');
+    pageOverlay.classList.add('active');
     el.classList.add('active');
     openedModalId = el.id;
   };
 
-  var closeModalWindow = function closeModalWindow() {
+  window.closeModalWindow = function () {
     document.getElementById(openedModalId).classList.remove('active');
-    PAGE_OVERLAY.classList.remove('active');
+    pageOverlay.classList.remove('active');
   };
 
   (function () {
     if (overlayListener) return;
     overlayListener = true;
-    PAGE_OVERLAY.addEventListener('click', closeModalWindow);
+    pageOverlay.addEventListener('click', closeModalWindow);
   })();
 
   articleTiles.forEach(function (article) {
-    article.addEventListener('click', function (e) {
-      return openModalWindow(e, article);
-    });
+    article.addEventListener('click', function () {
+      return openModalWindow(article);
+    }, true);
     article.classList.add('click-listener');
   });
 }

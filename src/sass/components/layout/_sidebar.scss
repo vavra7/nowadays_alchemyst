@@ -27,20 +27,6 @@
 	.main-area {
 		flex-grow: 1;
 		overflow-y: scroll;
-
-		@media (min-width: $sm) {
-			&::-webkit-scrollbar {
-				width: 7px;
-			}
-
-			&::-webkit-scrollbar-thumb {
-				background: rgb(221, 221, 221);
-				border-radius: 20px;
-			}
-
-			&::-webkit-scrollbar-thumb:hover {
-				background: rgb(197, 197, 197);
-			}
-		}
+		@include scroll_bar;
 	}
 }
