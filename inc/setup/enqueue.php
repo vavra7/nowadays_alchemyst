@@ -16,6 +16,7 @@ class Enqueue
 		wp_enqueue_style('main_style', get_template_directory_uri() . '/public/css/style.css', [], '1.0.0', 'all');
 		wp_enqueue_style( 'na_icons', get_template_directory_uri() . '/public/fonts/nowadays_alchemyst_icon_font/style.css', [], '1.0.0', 'all');
 		wp_enqueue_script('main_script', get_template_directory_uri() . '/public/js/script.js', [], '1.0.0', true);
+	
 	}
 
 

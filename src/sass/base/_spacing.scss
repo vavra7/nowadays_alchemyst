@@ -30,6 +30,16 @@
 }
 
 /**
+ *	Margin bottom
+ */
+
+ @each $degree, $size in $spacing {
+	.mb-#{$degree} {
+		margin-bottom: $size;
+	}
+}
+
+/**
  *	Padding all
  */
 
@@ -58,5 +68,15 @@
 	.py-#{$degree} {
 		padding-top: $size;
 		padding-bottom: $size;
+	}
+}
+
+/**
+ *	Padding top
+ */
+
+@each $degree, $size in $spacing {
+	.pt-#{$degree} {
+		padding-top: $size;
 	}
 }

@@ -10,6 +10,7 @@ final class init
 			setup\core::class,
 			setup\theme::class,
 			setup\enqueue::class,
+			setup\gutenberg::class,
 			template_support\front_page::class
 		];
 	}

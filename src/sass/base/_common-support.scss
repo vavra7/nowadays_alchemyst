@@ -1,6 +1,26 @@
+/**
+ *	Text aligin
+ */
+
+.text-align-center {
+	text-align: center;
+}
+
+.text-align-left {
+	text-align: left;
+}
+
+/**
+ *	Display
+ */
+
 .display-flex {
 	display: flex;
 }
+
+/**
+ * Flex
+ */
 
 .flex-direction-column {
 	flex-direction: column;
@@ -44,4 +64,16 @@
 
 .position-absolute {
 	position: absolute;
+}
+
+/**
+ * Background
+ */
+
+.background-size-cover {
+	background-size: cover;
+}
+
+.background-position-center {
+	background-position: center;
 }

@@ -1,0 +1,30 @@
+#site-footer {
+	.footer-container {
+		border-top: 2px solid grey;
+	}
+}
+
+.footer-column-2 {
+	display: flex;
+	flex-direction: column;
+
+	.icon-wrapper {
+		display: flex;
+		justify-content: center;
+
+		i {
+			margin: 0 0.3rem;
+			font-size: 1.3rem;
+		}
+	}
+
+	.footer-logo {
+		text-align: center;
+		margin-top: 1.5rem;
+
+		img {
+			width: 100%;
+			max-width: 50px;
+		}
+	}
+}
