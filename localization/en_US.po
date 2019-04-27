@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2019-04-22 20:27+0200\n"
-"PO-Revision-Date: 2019-04-22 20:27+0200\n"
+"POT-Creation-Date: 2019-04-26 22:31+0200\n"
+"PO-Revision-Date: 2019-04-26 22:31+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -24,6 +24,42 @@ msgstr ""
 msgid "load_more"
 msgstr "Load More"
 
-#: inc/setup/theme.php:29
+#: components/post_grid/modal-window.php:20
+msgid "read_more"
+msgstr "read more"
+
+#: components/single/single.php:22
+msgid "prev_post"
+msgstr "Previous Post"
+
+#: components/single/single.php:25
+msgid "next_post"
+msgstr "Next Post"
+
+#: inc/setup/theme.php:20
+msgid "sidebar_area"
+msgstr "Sidebar area"
+
+#: inc/setup/theme.php:22
+msgid "sidebar_area_description"
+msgstr "Area inside sidebar under menu."
+
+#: inc/setup/theme.php:30
+msgid "footer_column_1"
+msgstr "Footer column 1"
+
+#: inc/setup/theme.php:32
+msgid "footer_column_1_description"
+msgstr "Area in footer column 1"
+
+#: inc/setup/theme.php:40
+msgid "footer_column_3"
+msgstr "Footer column 3"
+
+#: inc/setup/theme.php:42
+msgid "footer_column_3_description"
+msgstr "Area in footer column 3"
+
+#: inc/setup/theme.php:66
 msgid "sidebar_main_menu"
 msgstr "Main menu located in sidebar"

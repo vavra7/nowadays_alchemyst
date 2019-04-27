@@ -9,6 +9,7 @@ mix.browserSync({
 	files: [
 		'src/scripts/**/*.js',
 		'src/sass/**/*.scss',
+		'localization/*.mo',
 		'**/*.php'
 	],
 	injectChanges: true,

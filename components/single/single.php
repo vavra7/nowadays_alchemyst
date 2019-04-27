@@ -16,4 +16,13 @@
 	<div class="single-content">
 		<?php the_content(); ?>
 	</div>
+
+	<div class="post-navigation display-flex justify-content-space-between mt-3">
+		<div class="post-link-prev">
+			<?php previous_post_link('%link', '<i class="na-icon-arrow-left"></i> ' . __('prev_post', 'nowadays_alchemyst')); ?>
+		</div>
+		<div class="post-link-next">
+			<?php next_post_link('%link', __('next_post', 'nowadays_alchemyst')  . ' <i class="na-icon-arrow-right"></i>'); ?>
+		</div>
+	</div>
 </article>

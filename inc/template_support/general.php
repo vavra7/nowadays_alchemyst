@@ -12,7 +12,8 @@ class General
 	}
 
 
-	public static function get_first_youtube_video(object $post) {
+	public static function get_first_youtube_video(object $post)
+	{
 		if (!has_block('core-embed/youtube', $post->ID)) return;
 
 		$extract_youtube_blocks = function (array $blocks) {
@@ -25,6 +26,16 @@ class General
 
 		if ($first_youtube_block['attrs'] && $first_youtube_block['attrs']['url']) {
 			return $first_youtube_block['attrs']['url'];
+		}
+	}
+
+
+	public static function has_youtube_block(object $post)
+	{
+		if (has_block('core-embed/youtube', $post->ID)) {
+			return true;
+		} else {
+			return false;
 		}
 	}
 }

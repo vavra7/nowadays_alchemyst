@@ -1,11 +1,20 @@
 <div id="post-grid" class="<?php echo basename(__FILE__, '.php') ?>">
 	<div class="post-container">
 		<?php
-		if (have_posts()) {
+		$args = [
+			'post_type' => 'post',
+			'post_status' => 'publish',
+			'posts_per_page' => 12
+		];
+		$query = new \WP_Query($args);
+
+
+
+		if ($query->have_posts()) {
 			$i = 1;
 
-			while (have_posts()) {
-				the_post();
+			while ($query->have_posts()) {
+				$query->the_post();
 
 				inc\template_support\general::get_component('/components/post_grid/grid-tile.php');
 

@@ -3,20 +3,13 @@
 		<footer id="site-footer" class="my-4">
 			<div class="container pt-4 footer-container">
 				<div class="row">
-					<div class="col-xs-4 justify-content-center">
-						<div>
-							<h6 class="mt-0 mb-1">
-								Nejnovější příspěvky:
-							</h6>
-
-							<ul>
-								<li>Příspěvek 1</li>
-								<li>Příspěvek 2</li>
-							</ul>
+					<div class="col-xs-12 col-sm-4 justify-content-center">
+						<div class="widget-area footer-column-1">
+							<?php dynamic_sidebar('footer_column_1'); ?>
 						</div>
 					</div>
 
-					<div class="col-xs-4 footer-column-2">
+					<div class="col-xs-12 col-sm-4 footer-column-2">
 						<div class="icon-wrapper">
 							<i class="na-icon-facebook-square"></i>
 							<i class="na-icon-instagram"></i>
@@ -28,16 +21,9 @@
 						</div>
 					</div>
 
-					<div class="col-xs-4 justify-content-center">
-						<div>
-							<h6 class="mt-0 mb-1">
-								Categorie:
-							</h6>
-
-							<ul>
-								<li>Kategorie 1</li>
-								<li>Kategorie 2</li>
-							</ul>
+					<div class="col-xs-12 col-sm-4 justify-content-center">
+						<div class="widget-area footer-column-3">
+							<?php dynamic_sidebar('footer_column_3'); ?>
 						</div>
 					</div>
 				</div>

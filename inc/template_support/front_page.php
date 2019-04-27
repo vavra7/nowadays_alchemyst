@@ -5,17 +5,8 @@ class Front_page
 {
 	public function register()
 	{
-		add_action('pre_get_posts', [$this, 'modify_main_query']);
 		add_action('wp_ajax_load_more_posts', [$this, 'load_more_posts']);
 		add_action('wp_ajax_nopriv_load_more_posts', [$this, 'load_more_posts']);
-	}
-
-
-	public function modify_main_query($query)
-	{
-		if (is_front_page()) {
-			$query->query_vars['posts_per_page'] = 12;
-		}
 	}
 
 

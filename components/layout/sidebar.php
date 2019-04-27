@@ -13,8 +13,8 @@
 			?>
 		</div>
 
-		<div class="widget-area-container mt-2">
-			Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit obcaecati culpa nulla in voluptatum suscipit, ipsum sunt earum quae adipisci consectetur illum cumque libero maxime molestias tenetur eaque porro saepe veniam aspernatur reprehenderit? Accusamus voluptate nihil facere quis voluptates! Aliquam magnam saepe quod? Molestiae corrupti delectus doloribus consequuntur ullam nostrum!
+		<div class="widget-area-container mt-3">
+			<?php get_sidebar(); ?>
 		</div>
 	</div>
 </aside>
