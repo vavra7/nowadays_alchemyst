@@ -15,17 +15,6 @@ class Setup_GUI
 
 		add_action('admin_menu', [$this, 'add_settings_subpages']);
 		add_action('admin_init', [$this, 'add_admin_settings']);
-		add_action('admin_menu', [$this, 'add_admin_pages']);
-	}
-
-
-	public function add_admin_pages()
-	{
-		$admin_pages = $this->admin->get_admin_pages();
-
-		foreach($admin_pages as $page) {
-			add_menu_page($page['page_title'], $page['menu_title'], $page['capability'], $page['menu_slug'], $page['callback'], $page['icon_url'], $page['position']);
-		}
 	}
 
 

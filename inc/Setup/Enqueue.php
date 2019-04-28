@@ -14,9 +14,9 @@ class Enqueue
 	public function enqueue_frontend_assets()
 	{
 		wp_enqueue_style('main_style', get_template_directory_uri() . '/public/css/style.css', [], '1.0.0', 'all');
-		wp_enqueue_style( 'na_icons', get_template_directory_uri() . '/public/fonts/nowadays_alchemyst_icon_font/style.css', [], '1.0.0', 'all');
+		wp_enqueue_style('na_icons', get_template_directory_uri() . '/public/fonts/nowadays_alchemyst_icon_font/style.css', [], '1.0.0', 'all');
+		// wp_enqueue_style('font_dancing_script', get_template_directory_uri() . '/public/fonts/Dancing_Script/DancingScript-Regular.ttf', [], null, 'all');
 		wp_enqueue_script('main_script', get_template_directory_uri() . '/public/js/script.js', [], '1.0.0', true);
-	
 	}
 
 

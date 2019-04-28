@@ -8,9 +8,13 @@
 		};
 		?>
 
-		<h1 class="single-title">
+		<h1 class="single-title mb-1">
 			<?php the_title(); ?>
 		</h1>
+
+		<small class="single-categories display-block">
+			<?php  the_category(', '); ?>
+		</small>
 	</header>
 
 	<div class="single-content">
@@ -21,6 +25,7 @@
 		<div class="post-link-prev">
 			<?php previous_post_link('%link', '<i class="na-icon-arrow-left"></i> ' . __('prev_post', 'nowadays_alchemyst')); ?>
 		</div>
+
 		<div class="post-link-next">
 			<?php next_post_link('%link', __('next_post', 'nowadays_alchemyst')  . ' <i class="na-icon-arrow-right"></i>'); ?>
 		</div>

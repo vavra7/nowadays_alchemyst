@@ -1,4 +1,4 @@
-<div id="modal-<?php the_ID(); ?>" class="<?php echo basename(__FILE__, '.php'); ?> position-fixed">
+<div id="modal-<?php the_ID(); ?>" class="<?php echo basename(__FILE__, '.php'); ?> position-fixed cursor-auto">
 	<div class="modal-header position-absolute">
 		<i id="close-modal-button" class="na-icon-close" onclick="closeModalWindow()"></i>
 	</div>

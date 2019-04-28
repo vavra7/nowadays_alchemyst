@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2019-04-27 20:03+0200\n"
-"PO-Revision-Date: 2019-04-27 20:03+0200\n"
+"POT-Creation-Date: 2019-04-28 14:47+0200\n"
+"PO-Revision-Date: 2019-04-28 14:47+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -28,6 +28,10 @@ msgstr "Nowadays Alchemyst Settings"
 msgid "load_more"
 msgstr "Load More"
 
+#: components/post_grid/become-alchemyst.php:5
+msgid "become_alchemyst"
+msgstr "Become Alchemyst!"
+
 #: components/post_grid/modal-window.php:20
 msgid "read_more"
 msgstr "read more"
@@ -44,8 +48,8 @@ msgstr "Next Post"
 msgid "dropdown_select"
 msgstr "— Select —"
 
-#: inc/Setup/Admin.php:69
-msgid "choose_become_alchemyst_page"
+#: inc/Setup/Admin.php:71 inc/Setup/Core.php:27
+msgid "become_alchemyst_page"
 msgstr "Become Alchemyst Page"
 
 #: inc/Setup/Theme.php:20

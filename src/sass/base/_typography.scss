@@ -1,6 +1,16 @@
+@font-face {
+	font-family: Dancing Script;
+	src: url('/wp-content/themes/nowadays_alchemyst/public/fonts/Dancing_Script/DancingScript-Regular.ttf');
+}
+
 body {
 	font-family: Arial, Helvetica, sans-serif;
-	line-height: 1.7rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: Dancing Script;
+	font-weight: normal;
+	color: $primary;
 }
 
 h1 {
@@ -29,6 +39,7 @@ h6 {
 
 p {
 	font-size: 1rem;
+	line-height: 1.7rem;
 }
 
 a {

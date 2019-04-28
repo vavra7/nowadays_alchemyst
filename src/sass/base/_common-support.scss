@@ -18,6 +18,10 @@
 	display: flex;
 }
 
+.display-block {
+	display: block;
+}
+
 /**
  * Flex
  */
@@ -76,4 +80,16 @@
 
 .background-position-center {
 	background-position: center;
+}
+
+/**
+ *	Cursor
+ */
+
+.cursor-pointer {
+	cursor: pointer;
+}
+
+.cursor-auto {
+	cursor: auto;
 }

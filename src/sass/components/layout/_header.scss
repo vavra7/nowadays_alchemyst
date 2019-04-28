@@ -2,6 +2,12 @@
  * Logo container
  */
 
+ .header-container {
+	 @media (max-width: $md - 1) {
+		 flex-direction: column-reverse;
+	 }
+ }
+
 .logo-container {
 	width: 100%;
 

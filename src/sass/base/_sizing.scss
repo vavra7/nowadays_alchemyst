@@ -1,0 +1,5 @@
+@each $degree, $size in $sizing {
+	.fs-#{$degree} {
+		font-size: $size;
+	}
+}

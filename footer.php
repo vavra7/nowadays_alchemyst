@@ -17,7 +17,7 @@
 						</div>
 
 						<div class="footer-logo">
-							<img src="<?php echo get_site_icon_url(); ?>" alt="">
+							<img src="<?php echo get_site_icon_url(150); ?>" alt="logo">
 						</div>
 					</div>
 

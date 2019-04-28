@@ -32,24 +32,6 @@ class Admin
 	}
 
 
-	public function get_admin_pages()
-	{
-		$admin_pages = [
-			[
-				'page_title'	=> 'Theme Admin Page',
-				'menu_title'	=> 'Theme Admin',
-				'capability'	=> 'manage_options',
-				'menu_slug'		=> 'theme-admin',
-				'callback'		=> array($this->callbacks, 'na_settings_page'),
-				'icon_url'		=> 'dashicons-admin-generic',
-				'position'		=> 80,
-			]
-		];
-
-		return $admin_pages;
-	}
-
-
 	public function get_settings()
 	{
 		$settings = [
@@ -86,7 +68,7 @@ class Admin
 		$fields = [
 			[
 				'id' => 'page_become_alchemyst',
-				'title' => __('choose_become_alchemyst_page', 'nowadays_alchemyst'),
+				'title' => __('become_alchemyst_page', 'nowadays_alchemyst'),
 				'callback' => [$this->callbacks, 'choose_become_alchemyst_page'],
 				'page' => 'nowadays-alchemyst',
 				'section' => 'general_section',

@@ -84,26 +84,9 @@
 			}
 		}
 	} @else {
+		.display-none,
 		.hide {
 			display: none;
-		}
-	}
-}
-
-/**
- *	Helpers
- */
-
-@for $i from 1 through length($breakpoints_max) {
-	@if ($i < length($breakpoints_max)) {
-		@media (max-width: nth(map-values($breakpoints_max), $i)) {
-			.#{nth(map-keys($breakpoints_max), $i)}-flex-direction-column-reverse {
-				flex-direction: column-reverse;
-			}
-		}
-	} @else {
-		.flex-direction-column-reverse {
-			flex-direction: column-reverse;
 		}
 	}
 }
