@@ -1,7 +1,7 @@
 <?php
-namespace inc\template_support;
+namespace Inc\Template_Support;
 
-class Front_page
+class Front_Page
 {
 	public function register()
 	{

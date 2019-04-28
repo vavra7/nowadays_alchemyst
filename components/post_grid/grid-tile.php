@@ -5,7 +5,7 @@
 		</h1>
 
 		<?php
-		inc\template_support\general::get_component('/components/post_grid/modal-window.php');
+		Inc\Template_Support\General::get_component('/components/post_grid/modal-window.php');
 		?>
 	</article>
 </div>

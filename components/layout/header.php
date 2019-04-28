@@ -25,7 +25,7 @@
 				<div class="header-menu-container display-flex flex-direction-column justify-content-space-between align-items-flex-end">
 					<div class="switch-language-container">
 						<?php
-						inc\template_support\general::get_component('/components/partials/buttons/switch-language.php');
+						Inc\Template_Support\General::get_component('/components/partials/buttons/switch-language.php');
 						?>
 					</div>
 					<i id="menu-toggle-button" class="na-icon-navicon menu-button mt-2"></i>

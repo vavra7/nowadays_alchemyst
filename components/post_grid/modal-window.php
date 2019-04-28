@@ -21,10 +21,10 @@
 		</p>
 
 
-		<?php if (inc\template_support\general::has_youtube_block(get_post())) { ?>
+		<?php if (Inc\Template_Support\General::has_youtube_block(get_post())) { ?>
 			<div class="youtube-container ar-16-9 mt-2">
 				<?php
-				$youtube_url = inc\template_support\general::get_first_youtube_video(get_post());
+				$youtube_url = Inc\Template_Support\General::get_first_youtube_video(get_post());
 				echo wp_oembed_get($youtube_url)
 				?>
 			</div>

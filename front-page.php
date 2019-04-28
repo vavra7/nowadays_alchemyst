@@ -5,7 +5,7 @@
 		<div class="col-xs-12">
 			<main id="main">
 				<?php
-				inc\template_support\general::get_component('/components/post_grid/grid.php', true);
+				Inc\Template_Support\General::get_component('/components/post_grid/grid.php', true);
 				?>
 			</main>
 		</div>

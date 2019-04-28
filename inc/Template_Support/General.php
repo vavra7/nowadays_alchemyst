@@ -1,5 +1,5 @@
 <?php
-namespace inc\template_support;
+namespace Inc\Template_Support;
 
 
 class General

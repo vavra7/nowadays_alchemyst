@@ -1,5 +1,5 @@
 <?php
-namespace inc\setup;
+namespace Inc\Setup;
 
 
 class Enqueue

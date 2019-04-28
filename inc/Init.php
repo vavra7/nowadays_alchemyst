@@ -1,17 +1,18 @@
 <?php
-namespace inc;
+namespace Inc;
 
 
-final class init
+final class Init
 {
 	public static function get_services()
 	{
 		return [
-			setup\core::class,
-			setup\theme::class,
-			setup\enqueue::class,
-			setup\gutenberg::class,
-			template_support\front_page::class
+			Setup\Core::class,
+			Setup\Theme::class,
+			Setup\Enqueue::class,
+			Setup\Gutenberg::class,
+			GUI\Setup_GUI::class,
+			Template_Support\Front_Page::class
 		];
 	}
 

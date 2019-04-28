@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2019-04-26 22:31+0200\n"
-"PO-Revision-Date: 2019-04-26 22:32+0200\n"
+"POT-Creation-Date: 2019-04-27 20:02+0200\n"
+"PO-Revision-Date: 2019-04-27 20:03+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: cs_CZ\n"
@@ -20,6 +20,10 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-3: src\n"
 "X-Poedit-SearchPathExcluded-4: vendor\n"
 
+#: components/admin/na-settings.php:4
+msgid "nowadays_alchemyst_settings_title"
+msgstr "Nowadays Alchemyst nastavení"
+
 #: components/partials/buttons/load-more.php:4
 msgid "load_more"
 msgstr "Načíst další"
@@ -36,30 +40,38 @@ msgstr "Předchozí příspěvek"
 msgid "next_post"
 msgstr "Následující příspěvek"
 
-#: inc/setup/theme.php:20
+#: inc/GUI/Callbacks/Settings_Callbacks.php:29
+msgid "dropdown_select"
+msgstr "— Vyberte —"
+
+#: inc/Setup/Admin.php:69
+msgid "choose_become_alchemyst_page"
+msgstr "Stránka staň se alchymistou"
+
+#: inc/Setup/Theme.php:20
 msgid "sidebar_area"
 msgstr "Postranní panel"
 
-#: inc/setup/theme.php:22
+#: inc/Setup/Theme.php:22
 msgid "sidebar_area_description"
 msgstr "Oblast v postranním panelu pod menu."
 
-#: inc/setup/theme.php:30
+#: inc/Setup/Theme.php:30
 msgid "footer_column_1"
 msgstr "Patička sloupec 1"
 
-#: inc/setup/theme.php:32
+#: inc/Setup/Theme.php:32
 msgid "footer_column_1_description"
 msgstr "Oblast v patičce v třtím sloupci."
 
-#: inc/setup/theme.php:40
+#: inc/Setup/Theme.php:40
 msgid "footer_column_3"
 msgstr "Patička sloupec 3"
 
-#: inc/setup/theme.php:42
+#: inc/Setup/Theme.php:42
 msgid "footer_column_3_description"
 msgstr "Oblast v patičce v třetím sloupci."
 
-#: inc/setup/theme.php:66
+#: inc/Setup/Theme.php:66
 msgid "sidebar_main_menu"
 msgstr "Hlavní menu v  postranním panelu"

@@ -1,5 +1,5 @@
 <?php
-namespace inc\setup;
+namespace Inc\Setup;
 
 class Theme
 {
@@ -9,7 +9,7 @@ class Theme
 		add_action('after_setup_theme', [$this, 'theme_support']);
 		add_action('after_setup_theme', [$this, 'theme_localization']);
 		add_action('after_setup_theme', [$this, 'register_menus']);
-		add_filter('excerpt_length', [$this, 'excerpt_lenght']);
+		add_filter('excerpt_length', [$this, 'excerpt_length']);
 		add_filter('excerpt_more', [$this, 'excerpt_end']);
 	}
 
@@ -68,7 +68,7 @@ class Theme
 	}
 
 
-	public function excerpt_lenght()
+	public function excerpt_length()
 	{
 		return 100;
 	}
